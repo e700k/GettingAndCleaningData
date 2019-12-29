@@ -1,5 +1,10 @@
 # Getting And Cleaning Data - Course Project
 
+**Contents**
+run_analysis.R -- the script file including the function to be called
+CodeBook.md -- a codebook identifying the varables in the output
+README.md -- this file
+
 The script file **run_analysis.R** contains a single function that is
 designed to work with the data set called "UCI HAR Dataset", that
 includes
