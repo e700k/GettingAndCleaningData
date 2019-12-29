@@ -1,6 +1,4 @@
-# Summary: 
-#
-run_alaysis <- function() {
+run_analysis <- function() {
         library(dplyr)
         library(stringr)
         
