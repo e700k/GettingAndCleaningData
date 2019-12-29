@@ -35,8 +35,9 @@ run_alaysis <- function() {
         names(y_train) <- c("activityId")
         names(subject_train) <- c("subjectId")
         
-        # Add features as column names in X
+        # Add features as column names in X and keeps only the mean and std measures
         names(x_train) <- as.vector(features$featureLabel)
+        x_train <- x_train[grep("\\-mean\\(\\)|\\-std\\(\\)", names(x_train))]
         
         # Lookup activity labels from the activity table to add to Y
         y_train <- left_join(y_train, activity, by = "activityId")
@@ -59,8 +60,9 @@ run_alaysis <- function() {
         names(y_test) <- c("activityId")
         names(subject_test) <- c("subjectId")
         
-        # Add features as column names in X
+        # Add features as column names in X and keeps only the mean and std measures
         names(x_test) <- as.vector(features$featureLabel)
+        x_test <- x_test[grep("\\-mean\\(\\)|\\-std\\(\\)", names(x_test))]
         
         # Lookup activity labels from the activity table to add to Y
         y_test <- left_join(y_test, activity, by = "activityId")
